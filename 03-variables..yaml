@@ -1,0 +1,12 @@
+- name: local variables 
+  hosts: all
+  become: true
+  gather_facts: yes
+  vars:
+    course: docker 
+    trainer: kedarnath 
+    duration: 20 days 
+  tasks:
+    name: accessing the local variables 
+    ansible.builtin.debug:
+      msg: "hello every  one we are learing {course} with in {duration} and trainer is {trainer}"
