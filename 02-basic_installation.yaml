@@ -1,0 +1,16 @@
+- hosts: all 
+  become: true
+  gather_facts: true 
+  tasks:
+    task: installing nginx 
+    ansible.builtin.dnf:
+      name: nginx 
+      status: present 
+    
+  task: start and enable the nginx service 
+  ansible.builtin.service:
+    name: nginx 
+    status: started
+    enable: yes 
+    
+
