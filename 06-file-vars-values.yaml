@@ -1,4 +1,3 @@
----
 - name: vars form another file
   hosts: all 
   become: true 
@@ -10,4 +9,3 @@
     msg: "hi, we are learing {{course}} amd duration is {{duration}} and trainer is {{trainer}}" 
 
 
----
