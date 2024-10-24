@@ -16,5 +16,5 @@
         msg: "here learning {{course}}  with in {{duration }} and trinner is {{trainer}}"
 
     - name: local level 
-      ansible.builtin.service:
+      ansible.builtin.debug:
        msg: "here learning {{course}}  with in {{duration }} and trinner is {{trainer}}"
