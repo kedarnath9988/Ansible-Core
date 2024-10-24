@@ -2,9 +2,9 @@
   hosts: all 
   become: true
   vars:
-    - course: DevOps 
-    - trainer: siva kumar  
-    - duration: 90 days
+     course: DevOps 
+     trainer: siva kumar  
+     duration: 90 days
   gather_facts: yes
   tasks:
     - name: play  variables
@@ -13,8 +13,8 @@
         duration: 10 days 
         trainer: nagesh 
       ansible.builtin.debug:
-        msg: "here learning {course}  with in {duration } and trinner is {trainer}"
+        msg: "here learning {{course}}  with in {{duration }} and trinner is {{trainer}}"
 
     - name: local level 
       ansible.builtin.service:
-       msg: "here learning {course}  with in {duration } and trinner is {trainer}"
+       msg: "here learning {{course}}  with in {{duration }} and trinner is {{trainer}}"
