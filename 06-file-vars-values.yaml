@@ -1,0 +1,13 @@
+---
+- name: vars form another file
+  hosts: all 
+  become: true 
+  vars_files:
+    - vars.yaml
+  tasks:
+    -name: printing over-ride variables
+    ansible.builtin.debug:
+    msg: "hi, we are learing {{course}} amd duration is {{duration}} and trainer is {{trainer}}" 
+
+
+---
