@@ -1,0 +1,12 @@
+- name: tasklevel variables
+  hosts: all 
+  become: true
+  gather_facts: yes
+  tasks:
+    - name: tasklevel variables
+      vars:
+        course: ansible 
+        duration: 10 days 
+        trainer: nagesh 
+      ansible.builtin.debug:
+        msg: "here learning {course}  with in {duration } and trinner is {trainer}"
