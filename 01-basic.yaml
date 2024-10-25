@@ -1,6 +1,6 @@
 - name: play 1
   hosts: all
-  become: ture
+  become: yes
   gather_facts: true
   tasks:
     - name: print some thing
