@@ -13,12 +13,12 @@
   vars_files:
     - vars.yaml
   tasks:
-    - name: playing paly level variables 
-      ansible.builtin.debug: 
-      vars:
-      - colour: "green"
-      - paper: "white "
-        msg: "hi we have colour {{colour}} and paper {{paper}}"
+    # - name: playing paly level variables 
+    #   ansible.builtin.debug: 
+    #   vars:
+    #   - colour: "green"
+    #   - paper: "white "
+    #     msg: "hi we have colour {{colour}} and paper {{paper}}"
     
     - name: playing task level variables 
       ansible.builtin.debug:
