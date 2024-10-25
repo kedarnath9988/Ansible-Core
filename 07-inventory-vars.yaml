@@ -1,0 +1,8 @@
+- name: accessing variables from inverntary file 
+  hosts: web 
+  become: yes 
+  gather_facts: true 
+  tasks: 
+    - name: accessing the inverntary file variables 
+      ansible.builtin.debug:
+        msg: "hi we are learing {{courese}} with in {{duration}} by trainer {{trainer}}"
