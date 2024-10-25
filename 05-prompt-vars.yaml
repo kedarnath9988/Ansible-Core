@@ -1,0 +1,11 @@
+---
+- name: prompt variables
+  hosts: all 
+  become: true 
+  vars_prompt:
+    name: trianer 
+  gather_facts: yes 
+  tasks:
+    - name 
+
+---
