@@ -3,6 +3,9 @@
   become: ture 
   gather_facts: true 
   tasks:
-    task: print hello world massage
-    ansible.builtin.debug:
-      msg: "hello world"
+      - name: print some thing 
+        ansible.builtin.debug:
+        msg: "hello world"
+      - name: ping all nodes 
+        ansible.builtin.ping:
+        
