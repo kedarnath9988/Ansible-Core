@@ -1,0 +1,19 @@
+- name: datatypes number list map 
+  hosts: localhost
+  vars:
+    courese: Devops with AWS # string 
+    tools: # list always starts with -
+      - ansible 
+      - shell 
+      - terraform 
+      - docker 
+      - k8s 
+    experience: # map or dictonary 
+      DevOps: 3 
+      docker: 2 
+      k8s: 1 
+    real_time_project: true # bboolean 
+  tasks:
+    - name:
+    ansible.builtin.debug:
+      msg: "we need tools likes {{tools}} with experience having {{experience}} having jd is {{courese}}"
