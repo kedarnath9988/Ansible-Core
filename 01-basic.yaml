@@ -1,11 +1,11 @@
-- name: play 1 
-  hosts: all 
-  become: ture 
-  gather_facts: true 
+- name: play 1
+  hosts: all
+  become: ture
+  gather_facts: true
   tasks:
-      - name: print some thing 
-        ansible.builtin.debug:
-        msg: "hello world"
-      - name: ping all nodes 
-        ansible.builtin.ping:
-        
+    - name: print some thing
+      ansible.builtin.debug:
+      msg: "hello world"
+
+    - name: ping all nodes
+      ansible.builtin.ping:
