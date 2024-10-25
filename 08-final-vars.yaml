@@ -1,8 +1,8 @@
 - name: access all types of variables
   hosts: localhost
-  vars:
-  - colour: "task level blue "
-  - paper: "white "
+  # vars:
+  # - colour: "task level blue "
+  # - paper: "white "
   # vars_prompt:
   #   - name: colour
   #     prompt: enter the colour from the prompt 
@@ -20,12 +20,12 @@
     #   - paper: "white "
     #     msg: "hi we have colour {{colour}} and paper {{paper}}"
     
-    # - name: playing task level variables 
-    #   ansible.builtin.debug:
-    #     msg:  "hi we have colour {{colour}} and paper {{paper}}"
+     - name: playing task level variables 
+       ansible.builtin.debug:
+         msg:  "hi we have colour {{colour}} and paper {{paper}}"
 
-    - name: form the inventory file 
-      ansible.builtin.debug:
+     - name: form the inventory file 
+       ansible.builtin.debug:
         msg:"hi we are learing {{course}} within {{duration}}"
 
 
