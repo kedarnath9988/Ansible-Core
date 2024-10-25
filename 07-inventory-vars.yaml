@@ -1,7 +1,5 @@
 - name: accessing variables from inverntary file
   hosts: localhost
-  become: yes
-  gather_facts: true
   tasks:
     - name: accessing the inverntary file variables
       ansible.builtin.debug:
