@@ -2,7 +2,7 @@
   hosts: localhost
   vars_prompt:
     - name: Number 
-      Prompt: please enter the Number 
+      prompt: please enter the Number 
       private: false 
   tasks:
     - name: check the number is less then 18 
