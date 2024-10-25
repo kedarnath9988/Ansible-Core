@@ -1,4 +1,5 @@
-- hosts: all 
+- name: play 1 
+  hosts: all 
   become: true
   gather_facts: true 
   tasks:
@@ -12,5 +13,5 @@
     name: nginx 
     status: started
     enable: yes 
-    
+      
 

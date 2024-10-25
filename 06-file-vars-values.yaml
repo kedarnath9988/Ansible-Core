@@ -1,10 +1,10 @@
-- name: accessing over-ride variables from another file 
-  hosts: all 
-  become: yes 
+- name: accessing over-ride variables from another file
+  hosts: all
+  become: yes
   vars_files:
-    - vars.yaml 
-  gather_facts: true 
+    - vars.yaml
+  gather_facts: true
   tasks:
-    - name: over-riding the variables 
+    - name: over-riding the variables
       ansible.builtin.debug:
         msg: "hi we are learing {{course}} and trainer is {{trainer}} in {{duration}}"
