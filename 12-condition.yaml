@@ -11,7 +11,9 @@
     - name: print user info 
       ansible.builtin.debug:
         msg: "user info is :{{USER_EXp}}"
-
+    - name: create user expense 
+      ansible.builtin.command: useradd expense
+      when: USER_EXp.rc != 0 # condition 
     - name: print Hello 
       ansible.builtin.debug:
         msg: "hello "
