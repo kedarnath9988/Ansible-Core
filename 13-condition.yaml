@@ -1,0 +1,15 @@
+- name: check number is less then 18 or not 
+  hosts: localhost
+  vars_prompt:
+    - name: Number 
+      Prompt: please enter the Number 
+      private: false 
+  tasks:
+    - name: check the number is less then 18 
+      ansible.builtin.debug:
+        msg: "the {{Number}} i slees then 18 "
+      when: Number < 18 
+    - name: check the number is grater  then 18 
+      ansible.builtin.debug:
+        msg: "the {{Number}} i grater  then 18 "
+      when: Number > 18 
