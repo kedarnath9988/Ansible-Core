@@ -1,0 +1,11 @@
+- name: Check the user is exited or not 
+  hosts: web 
+  become: yes 
+  gather_facts: true 
+  tasks:
+    - name: eheck the user 
+      ansible.builtin.command: id expense 
+
+    - name: print Hello 
+      ansible.builtin.debug:
+        msg: "hello "
