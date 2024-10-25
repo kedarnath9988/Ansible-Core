@@ -1,0 +1,8 @@
+- name: default value 
+  hosts: web
+  become: yes
+  gather_facts: true 
+  tasks:
+   - name: default vlues 
+     ansible.builtin.debug:
+      msg: "hi we are learning {{courese | default('Ansible ') }}"
