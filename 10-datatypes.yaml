@@ -15,5 +15,5 @@
     real_time_project: true # bboolean 
   tasks:
     - name:
-    ansible.builtin.debug:
-      msg: "we need tools likes {{tools}} with experience having {{experience}} having jd is {{courese}}"
+      ansible.builtin.debug:
+        msg: "we need tools likes {{tools}} with experience having {{experience}} having jd is {{courese}}"
