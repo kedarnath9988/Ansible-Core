@@ -5,6 +5,7 @@
   tasks:
     - name: eheck the user 
       ansible.builtin.command: id expense 
+      ignore_errors: true 
 
     - name: print Hello 
       ansible.builtin.debug:
