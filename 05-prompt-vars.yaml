@@ -1,11 +1,16 @@
----
-- name: prompt variables
+- name: prompt variables 
   hosts: all 
-  become: true 
+  become: yes 
   vars_prompt:
-    name: trianer 
-  gather_facts: yes 
-  tasks:
-    - name 
+    - name: course
+      prompt: please enter the course 
+      private: false 
 
----
+    - name: duration
+      prompt: plese enter the duration 
+      private: false 
+  gather_facts: true 
+  tasks:
+    - name: accessing prompt variables 
+      ansible.builtin.debug: 
+        msg: "hi we are learing {{course}} with in {{duration}} "
