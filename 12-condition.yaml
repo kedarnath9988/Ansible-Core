@@ -5,7 +5,12 @@
   tasks:
     - name: eheck the user 
       ansible.builtin.command: id expense 
+      register: USER_EXp
       ignore_errors: true 
+
+    - name: print user info 
+      ansible.builtin.debug:
+        msg: "user info is :{{USER_EXp}}"
 
     - name: print Hello 
       ansible.builtin.debug:
