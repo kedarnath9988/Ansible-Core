@@ -1,0 +1,8 @@
+- name: argments variables
+  hosts: localhost
+  become: yes 
+  gather_facts: true 
+  tasks:
+    - name: access the variables as a arguments by uing -e 
+      ansible.builtin.debug:
+        msg: "hi we are going to {{place}} on {{day}}"
