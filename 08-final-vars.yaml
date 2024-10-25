@@ -10,7 +10,7 @@
   #   - name: paper
   #     prompt: please enter the paper name 
   #     private: false
-   vars_files:
+  vars_files:
     - vars.yaml
   tasks:
     - name: playing paly level variables 
@@ -29,4 +29,4 @@
         msg:"hi we are learing {{course}} within {{duration}}"
 
 
-#1 -> prompt level 2-> task level 3-> 
+#1 -> prompt level 2-> task level 3
