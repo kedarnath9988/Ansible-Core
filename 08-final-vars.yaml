@@ -3,14 +3,14 @@
   vars:
   - colour: "task level blue "
   - paper: "white "
-  vars_prompt:
-    - name: colour
-      prompt: enter the colour from the prompt 
-      private: false 
-    - name: paper
-      prompt: please enter the paper name 
-      private: false
-  vars_files:
+  # vars_prompt:
+  #   - name: colour
+  #     prompt: enter the colour from the prompt 
+  #     private: false 
+  #   - name: paper
+  #     prompt: please enter the paper name 
+  #     private: false
+   vars_files:
     - vars.yaml
   tasks:
     - name: playing paly level variables 
@@ -28,4 +28,5 @@
       ansible.builtin.debug:
         msg:"hi we are learing {{course}} within {{duration}}"
 
-    
+
+#1 -> prompt level 2-> task level 3-> 
