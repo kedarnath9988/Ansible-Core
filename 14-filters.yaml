@@ -60,3 +60,23 @@
       ansible.builtin.debug:
         msg: "{{my_dict | dict2items }}"
 
+- name: items to dictonary 
+  hosts: localhost
+  vars:
+   my_list:
+            [
+            {"key": "ansible", "value": 3 },
+            { "key": "git", "value": 3},
+            {"key": "docke","value": 5},
+            { "key": "k8s","value": 2}
+            ]
+
+  gather_facts: yes
+  tasks: 
+    - name: list to map 
+      ansible.builtin.debug:
+        msg: "before converstion of list {{my_list}}"
+    - name: list to map 
+      ansible.builtin.debug:
+        msg: "after  converstion of list {{my_list | items2dict}}"
+
