@@ -58,5 +58,5 @@
   tasks: 
     - name: dict2item converstion
       ansible.builtin.debug:
-        msg: "{{my_dict | dict2list }}"
+        msg: "{{my_dict | dict2items }}"
 
