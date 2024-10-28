@@ -26,3 +26,13 @@
     - name: lower case
       ansible.builtin.debug:
         msg: "{{content | lower }}"
+
+- name: remove the duplicates 
+  hosts: localhost
+  vars: 
+    ages: [22, 32, 22, 54, 65, 65, 32]
+  gather_facts: yes
+  tasks:
+    - name: removie duplicates 
+      ansible.builtin.debug: 
+        msg: "{{ ages | unique }}"
