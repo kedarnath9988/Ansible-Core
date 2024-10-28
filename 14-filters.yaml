@@ -1,5 +1,5 @@
 - name: default value 
-  hosts: web
+  hosts: localhost 
   become: yes
   gather_facts: true 
   tasks:
