@@ -16,3 +16,13 @@
     - name: upper case 
       ansible.builtin.debug:
         msg: "{{content | upper }}"
+
+- name: lower case converstion 
+  hosts: localhost
+  vars:
+    content: "HI GOOD ABOUT YOU"
+  gather_facts: yes 
+  tasks:
+    - name: lower case
+      ansible.builtin.debug:
+        msg:"{{content | lower }}"
