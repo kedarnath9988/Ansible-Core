@@ -7,3 +7,12 @@
      ansible.builtin.debug:
       msg: "hi we are learning {{courese | default('Ansible ') }}"
   
+- name: upper case converstion 
+  hosts: localhost 
+  vars:
+    content: hello how are you 
+  gather_facts: yes 
+  tasks:
+    - name: upper case 
+      ansible.builtin.debug:
+        msg: "{{content | upper }}"
