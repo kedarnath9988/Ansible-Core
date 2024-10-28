@@ -25,4 +25,4 @@
   tasks:
     - name: lower case
       ansible.builtin.debug:
-        msg:"{{content | lower }}"
+        msg: "{{content | lower }}"
